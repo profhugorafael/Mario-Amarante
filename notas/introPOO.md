@@ -92,3 +92,49 @@ class Aluno {
   }
 }
 ```
+
+## Sobrecarga (overload)
+
+```java
+int soma(int a, int b) {
+  return a + b; 
+}
+
+int soma(int a, int b, int b) {
+  return a + b + c;
+}
+```
+
+```java
+public class Aluno {
+  // tem - atributos
+  public String matricula;
+  public String nome;
+  public int idade;
+  public double nota;
+
+  public Aluno() {
+  }
+
+  public Aluno(String matricula, String nome) {
+    this.matricula = matricula;
+    this.nome = nome;
+  }
+
+  public Aluno(String matricula, String nome, int idade) {
+    this.matricula = matricula;
+    this.nome = nome;
+
+    if(idade < 18) 
+      return;
+
+    this.idade = idade;
+  }
+
+}
+```
+
+## Encapsulamento
+
+- o que é? esconder e proteger a lógica da classe dentro da classe
+- getters and setters
